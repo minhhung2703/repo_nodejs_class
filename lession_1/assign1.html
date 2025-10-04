@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
+    <div class="max-w-7xl mx-auto">
+        <header class="bg-white">
+            <nav aria-label="Global" class="flex items-center justify-between p-6 lg:px-8">
+                <div class="flex lg:flex-1">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <span class="sr-only">Your Company</span>
+                        <h1 class="h-8 w-auto text-2xl font-semibold">FASHION STORE</h1>
+                    </a>
+                </div>
+                <div class="flex md:hidden">
+                    <button type="button" command="show-modal" commandfor="mobile-menu"
+                        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                        <span class="sr-only">Open main menu</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon"
+                            aria-hidden="true" class="size-6">
+                            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+                <el-popover-group class="hidden md:flex md:gap-x-12">
+                    <a href="#"
+                        class="text-sm/6 font-semibold text-gray-900 transition-colors duration-200 hover:text-purple-600">All</a>
+                    <a href="#"
+                        class="text-sm/6 font-semibold text-gray-900 transition-colors duration-200 hover:text-purple-600">Clothings</a>
+                    <a href="#"
+                        class="text-sm/6 font-semibold text-gray-900 transition-colors duration-200 hover:text-purple-600">Bags</a>
+                    <a href="#"
+                        class="text-sm/6 font-semibold text-gray-900 transition-colors duration-200 hover:text-purple-600">Shoes</a>
+                    <a href="#"
+                        class="text-sm/6 font-semibold text-gray-900 transition-colors duration-200 hover:text-purple-600">Watches</a>
+                    <a href="#"
+                        class="text-sm/6 font-semibold text-gray-900 transition-colors duration-200 hover:text-purple-600">Googles</a>
+                </el-popover-group>
+            </nav>
+            <el-dialog>
+                <dialog id="mobile-menu" class="backdrop:bg-transparent md:hidden">
+                    <div tabindex="0" class="fixed inset-0 focus:outline-none">
+                        <el-dialog-panel
+                            class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 md:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                            <div class="flex items-center justify-between">
+                                <a href="#" class="-m-1.5 p-1.5">
+                                    <h1 class="h-8 w-auto text-2xl font-semibold">FASHION STORE</h1>
+                                </a>
+                                <button type="button" command="close" commandfor="mobile-menu"
+                                    class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                                    <span class="sr-only">Close menu</span>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                        data-slot="icon" aria-hidden="true" class="size-6">
+                                        <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="mt-6 flow-root">
+                                <div class="-my-6 divide-y divide-gray-500/10">
+                                    <div class="space-y-2 py-6">
+                                        <a href="#"
+                                            class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">All</a>
+                                        <a href="#"
+                                            class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Clothings</a>
+                                        <a href="#"
+                                            class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Bags</a>
+                                        <a href="#"
+                                            class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Shoes</a>
+                                        <a href="#"
+                                            class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Watches</a>
+                                        <a href="#"
+                                            class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Gooogles</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </el-dialog-panel>
+                    </div>
+                </dialog>
+            </el-dialog>
+
+            <main>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4 md:p-8">
+                    <!-- Card 1 -->
+                    <div
+                        class="bg-white rounded-xl shadow-md w-full max-w-xs mx-auto flex flex-col transform transition duration-200 hover:scale-105 active:scale-95 cursor-pointer">
+                        <div class="bg-purple-400 rounded-t-xl h-40 flex items-center justify-center">
+                            <span class="text-white text-2xl font-semibold">Jersey Cardigan</span>
+                        </div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <div class="text-lg font-semibold">Jersey Cardigan</div>
+                            <!-- Example image for Jersey Cardigan -->
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQPp0K_pFmDUpgvN4awSkmtOKVSVvUvBD9Cw&s"
+                                alt="Jersey Cardigan" class="absolute inset-0 w-full h-40 object-cover rounded-t-xl" />
+                            <div class="mt-2">
+                                <span class="line-through text-gray-400 mr-2">€100.00</span>
+                                <span class="text-red-500 font-bold">€80.00</span>
+                            </div>
+                            <button
+                                class="mt-6 bg-red-500 text-white font-semibold py-3 rounded-full hover:bg-red-600 transition">ADD
+                                TO CART</button>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div
+                        class="bg-white rounded-xl shadow-md w-full max-w-xs mx-auto flex flex-col transform transition duration-200 hover:scale-105 active:scale-95 cursor-pointer">
+                        <div class="bg-purple-400 rounded-t-xl h-40 flex items-center justify-center">
+                            <span class="text-white text-2xl font-semibold">Floral Printed Blouse & Skirt</span>
+                        </div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <div class="text-lg font-semibold">Floral Printed Blouse & Skirt</div>
+                            <!-- Example image for Floral Printed Blouse & Skirt -->
+                            <img src="https://www.cotswoldcollections.com/wp/wp-content/uploads/2023/07/traditional-womens-clothing.jpg"
+                                alt="Floral Printed Blouse & Skirt"
+                                class="absolute inset-0 w-full h-40 object-cover rounded-t-xl" />
+                            <div class="mt-2">
+                                <span class="text-red-500 font-bold">€25.00</span>
+                            </div>
+                            <button
+                                class="mt-6 bg-red-500 text-white font-semibold py-3 rounded-full hover:bg-red-600 transition">ADD
+                                TO CART</button>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div
+                        class="relative bg-gray-400 rounded-xl shadow-md w-full max-w-xs mx-auto flex flex-col justify-end transform transition duration-200 hover:scale-105 active:scale-95 cursor-pointer overflow-hidden h-full min-h-[320px]">
+                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80"
+                            alt="Classic Women's Trousers" class="absolute inset-0 w-full h-full object-cover" />
+                        <img src="https://www.cotswoldcollections.com/wp/wp-content/uploads/2023/07/classic-womens-trousers.jpg"
+                            alt="Classic Women's Trousers" class="absolute inset-0 w-full h-full object-cover" />
+                        <div class="relative z-10 p-6 flex flex-col flex-1 items-center justify-center bg-black/40">
+                            <span class="text-white text-xl font-semibold mb-2">FOR FASHION</span>
+                            <button
+                                class="bg-red-500 text-white font-semibold py-2 px-6 rounded-full hover:bg-red-600 transition">VIEW
+                                ALL</button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </header>
+
+    </div>
+
+
+
+</body>
+
+</html>
