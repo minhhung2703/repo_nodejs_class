@@ -39,3 +39,6 @@ const student = {
         english: 85,
     },
 };
+
+const { name: studentName, scores: { math, english } } = student;
+console.log(studentName);
