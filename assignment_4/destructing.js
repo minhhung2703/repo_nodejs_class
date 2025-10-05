@@ -29,7 +29,6 @@ console.log(name); // Alice
 console.log(age);   // 25
 console.log(city);  // New York
 
-
 // Nested destructuring
 const student = {
     id: 1,
@@ -42,3 +41,30 @@ const student = {
 
 const { name: studentName, scores: { math, english } } = student;
 console.log(studentName);
+
+const user = [
+    {
+        id: 1,
+        name: 'Charlie',
+        address: {
+            city: 'Los Angeles',
+        },
+    },
+    {
+        id: 2,
+        name: 'John',
+        address: {
+            city: 'Chicago',
+        },
+    },
+    {
+        id: 3,
+        name: 'Mary',
+        address: {
+            city: 'Houston',
+        },
+    },
+];
+
+const [...user1] = user;
+console.log(user1);
